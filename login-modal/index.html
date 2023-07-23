@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Mulish", "sans-serif"],
+            mono: ["Rokkitt", "monospace"],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Glboal Container -->
+    <div
+      class="flex flex-col md:flex-row min-h-screen bg-rose-50 justify-center items-center mx-auto"
+    >
+      <!-- card Container -->
+      <div
+        class="flex relative m-6 flex-col md:flex-row bg-white rounded-lg shadow-lg"
+      >
+        <!-- left side -->
+        <div class="flex flex-col p-6 md:p-20">
+          <p class="font-mono text-2xl font-semibold my-3">Log in</p>
+          <p class="font-sans text-normal my-3 font-light">
+            Log in to your account to upload or download pictures, videos or
+            music.
+          </p>
+          <input
+            type="text"
+            class="px-5 py-5 placeholder:font-light border border-gray-300 focus:border-blue-300 rounded-lg my-3"
+            placeholder="Enter your email address"
+          />
+          <div
+            class="flex flex-col md:flex-row md:w-auto md:justify-between justify-center items-center space-y-3 md:space-y-0"
+          >
+            <p class="text-sans text-blue-400 font-light">Forgot password</p>
+            <button
+              class="flex w-full md:w-auto items-center justify-center flex-row space-x-3 px-12 py-5 bg-blue-500 shadow-sm rounded-lg transform hover:-translate-y-0.5 hover:shadow-lg duration-300 hover:bg-blue-400"
+            >
+              <p class="text-white text-lg font-sans font-normal">Next</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-7"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#ffffff"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <line x1="13" y1="18" x2="19" y2="12" />
+                <line x1="13" y1="6" x2="19" y2="12" />
+              </svg>
+            </button>
+          </div>
+          <div class="border-t-2 border-gray-300 mt-16"></div>
+          <div
+            class="font-sans text-md font-light mt-3 text-center text-slate-400"
+          >
+            Or log in with
+          </div>
+          <div class="flex flex-col md:flex-row md:w-auto justify-between">
+            <button
+              class="border border-gray-300 flex flex-row justify-center space-x-3 w-full md:w-auto items-center px-12 py-3 mt-3 rounded-lg transform hover:-translate-y-0.5 hover:shadow-lg duration-300"
+            >
+              <img src="./images/facebook.png" alt="" class="w-12 h-12" />
+              <p class="text-2xl font-sans font-light">Facebook</p>
+            </button>
+            <button
+              class="border border-gray-300 flex flex-row justify-center space-x-3 w-full md:w-auto items-center px-12 py-3 mt-3 rounded-lg transform hover:-translate-y-0.5 hover:shadow-lg duration-300"
+            >
+              <img src="./images/google.png" alt="" class="w-12 h-12" />
+              <p class="text-2xl font-sans font-light">Google</p>
+            </button>
+          </div>
+        </div>
+        <!-- right side -->
+        <img
+          src="./images/image.jpg"
+          alt=""
+          class="hidden md:block md:w-[430px] rounded-r-lg"
+        />
+        <div
+          class="absolute top-4 right-4 bg-gray-300 rounded-full p-2 hover:-translate-y-0.5 hover:shadow-lg hover:opacity-70 duration-300 md:bg-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-black group-hover:text-gray-600"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
